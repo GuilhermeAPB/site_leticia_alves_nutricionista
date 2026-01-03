@@ -71,7 +71,7 @@ const App: React.FC = () => {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-100 p-6 flex flex-col space-y-4 md:hidden shadow-xl animate-in fade-in slide-in-from-top-4">
+          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-100 p-6 flex flex-col space-y-4 md:hidden shadow-xl">
             <button onClick={() => scrollToSection('metodo')} className="text-left py-2 font-medium">O Método</button>
             <button onClick={() => scrollToSection('especialidades')} className="text-left py-2 font-medium">Especialidades</button>
             <button onClick={() => scrollToSection('sobre')} className="text-left py-2 font-medium">Sobre</button>
@@ -80,7 +80,7 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      {/* Hero Section - Imagem de Roupa Verde (Elegante/Formal) */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-emerald-50/40 rounded-l-[150px] hidden md:block" />
         
@@ -137,9 +137,8 @@ const App: React.FC = () => {
 
           <div className="relative">
             <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl shadow-emerald-900/10 border-8 border-white group">
-              {/* Espaço para a Imagem Verde (Elegante) */}
               <img 
-                src="./nutri_verde.png" 
+                src="/nutri_verde.png" 
                 alt="Nutricionista Letícia Alves - Perfil Elegante" 
                 className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/800x1000?text=Leticia+Alves+Elegante"; }}
@@ -191,14 +190,13 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Sobre Section - Imagem de Roupa Branca (Profissional/Qualidade) */}
+      {/* Sobre Section */}
       <section id="sobre" className="py-24 bg-[#F8F9FA] relative">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1 relative">
             <div className="rounded-[48px] overflow-hidden shadow-2xl border-4 border-white aspect-[3/4]">
-              {/* Espaço para a Imagem Branca (Profissional) */}
               <img 
-                src="./nutri_branco.png" 
+                src="/nutri_branco.png" 
                 alt="Dra. Letícia Alves em atendimento" 
                 className="w-full h-full object-cover"
                 onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/800x1000?text=Leticia+Alves+Profissional"; }}
@@ -213,7 +211,7 @@ const App: React.FC = () => {
           <div className="order-1 md:order-2 space-y-8">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Ciência que acolhe, <br/><span className="text-emerald-800">nutrição que transforma.</span></h2>
             
-            <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
+            <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
               <p>
                 Como nutricionista, acredito que a saúde vai muito além do que está no prato. Sou apaixonada por desmistificar a nutrição "robótica" e trazer uma abordagem onde a <strong>escuta ativa</strong> e o <strong>conhecimento técnico</strong> caminham juntos.
               </p>
@@ -303,7 +301,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <span className="text-xl font-serif font-bold text-emerald-900">Letícia Alves</span>
-            <p className="text-slate-400 text-xs mt-1">© 2026 • Todos os direitos reservados.</p>
+            <p className="text-slate-400 text-sm mt-1">© 2026 • Todos os direitos reservados.</p>
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="text-slate-400 hover:text-emerald-600 transition-colors"><Instagram size={20} /></a>
