@@ -45,7 +45,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex flex-col cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <span className="text-2xl font-serif font-bold tracking-tight text-emerald-900">Letícia Alves</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-medium">Nutrição Humana & Especializada</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-medium italic text-left">Nutrição Humana & Especializada</span>
           </div>
 
           {/* Desktop Menu */}
@@ -75,7 +75,7 @@ const App: React.FC = () => {
             <button onClick={() => scrollToSection('metodo')} className="text-left py-2 font-medium">O Método</button>
             <button onClick={() => scrollToSection('especialidades')} className="text-left py-2 font-medium">Especialidades</button>
             <button onClick={() => scrollToSection('sobre')} className="text-left py-2 font-medium">Sobre</button>
-            <a href={WHATSAPP_LINK} className="bg-emerald-900 text-white p-4 rounded-xl text-center font-bold">Agendar pelo WhatsApp</a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-emerald-900 text-white p-4 rounded-xl text-center font-bold">Agendar pelo WhatsApp</a>
           </div>
         )}
       </nav>
@@ -149,9 +149,9 @@ const App: React.FC = () => {
             <div className="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-2xl shadow-xl border border-emerald-50 max-w-[200px] animate-bounce-slow">
               <div className="flex items-center space-x-3 mb-2 text-emerald-600">
                 <Heart size={20} fill="currentColor" />
-                <span className="font-bold text-slate-900">Acolhimento</span>
+                <span className="font-bold text-slate-900 font-sans">Acolhimento</span>
               </div>
-              <p className="text-xs text-slate-500">Foco total no seu bem-estar emocional e físico.</p>
+              <p className="text-xs text-slate-500 font-sans">Foco total no seu bem-estar emocional e físico.</p>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ const App: React.FC = () => {
             <h2 className="text-4xl font-serif font-bold mb-4">O Método Letícia Alves</h2>
             <div className="h-1 w-20 bg-emerald-500 rounded-full" />
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-12 font-sans">
             <div className="space-y-4 p-6 rounded-3xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
               <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400">
                 <ShieldCheck size={28} />
@@ -204,11 +204,11 @@ const App: React.FC = () => {
             </div>
             <div className="absolute -top-4 -right-4 bg-emerald-900 text-white p-6 rounded-3xl shadow-xl hidden md:block">
               <p className="text-2xl font-serif font-bold tracking-tight">Especialista</p>
-              <p className="text-xs uppercase tracking-widest opacity-70">Saúde & Bem-estar</p>
+              <p className="text-xs uppercase tracking-widest opacity-70 font-sans">Saúde & Bem-estar</p>
             </div>
           </div>
 
-          <div className="order-1 md:order-2 space-y-8">
+          <div className="order-1 md:order-2 space-y-8 font-sans text-left">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Ciência que acolhe, <br/><span className="text-emerald-800">nutrição que transforma.</span></h2>
             
             <div className="space-y-6 text-slate-600 leading-relaxed text-lg text-justify">
@@ -223,11 +223,11 @@ const App: React.FC = () => {
             <div className="grid grid-cols-2 gap-6 py-4">
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-emerald-900">100%</span>
-                <span className="text-sm text-slate-500">Personalizado</span>
+                <span className="text-sm text-slate-500 font-sans">Personalizado</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-emerald-900">Infinito</span>
-                <span className="text-sm text-slate-500">Suporte ao Paciente</span>
+                <span className="text-sm text-slate-500 font-sans">Suporte ao Paciente</span>
               </div>
             </div>
 
@@ -235,7 +235,7 @@ const App: React.FC = () => {
               href={WHATSAPP_LINK} 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 text-emerald-900 font-bold border-b-2 border-emerald-900 pb-1 hover:text-emerald-700 hover:border-emerald-700 transition-all"
+              className="inline-flex items-center space-x-3 text-emerald-900 font-bold border-b-2 border-emerald-900 pb-1 hover:text-emerald-700 hover:border-emerald-700 transition-all font-sans"
             >
               <span>Fale comigo diretamente</span>
               <ChevronRight size={18} />
@@ -246,12 +246,12 @@ const App: React.FC = () => {
 
       {/* Specialized Areas */}
       <section id="especialidades" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center mb-16">
+        <div className="max-w-7xl mx-auto px-6 text-center mb-16 font-sans">
           <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4">Áreas de Atuação</h2>
           <p className="text-slate-500 max-w-2xl mx-auto">Um olhar especializado para cada momento da sua vida.</p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6 font-sans">
           {[
             { title: "Jovens & Adolescentes", icon: <Users />, color: "bg-blue-50 text-blue-600", desc: "Desenvolvimento saudável e performance." },
             { title: "Longevidade & Idosos", icon: <Award />, color: "bg-amber-50 text-amber-600", desc: "Qualidade de vida e prevenção de doenças." },
@@ -270,14 +270,14 @@ const App: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 font-sans">
         <div className="max-w-5xl mx-auto bg-emerald-900 rounded-[48px] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
           <div className="relative z-10 space-y-8">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">
               A sua transformação <br /> começa com uma escolha.
             </h2>
-            <p className="text-emerald-100/70 text-lg max-w-2xl mx-auto">
+            <p className="text-emerald-100/70 text-lg max-w-2xl mx-auto font-sans">
               Garanta sua vaga para um atendimento que prioriza você.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -285,31 +285,31 @@ const App: React.FC = () => {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-emerald-900 px-10 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 hover:bg-emerald-50 transition-all shadow-lg transform hover:-translate-y-1"
+                className="bg-white text-emerald-900 px-10 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 hover:bg-emerald-50 transition-all shadow-lg transform hover:-translate-y-1 font-sans"
               >
                 <MessageCircle size={20} />
                 <span>Agendar pelo WhatsApp</span>
               </a>
             </div>
-            <p className="text-emerald-300/50 text-xs uppercase tracking-widest font-bold">Atendimento Presencial e Online</p>
+            <p className="text-emerald-300/50 text-xs uppercase tracking-widest font-bold font-sans">Atendimento Presencial e Online</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-slate-100">
+      <footer className="py-12 border-t border-slate-100 font-sans">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <span className="text-xl font-serif font-bold text-emerald-900">Letícia Alves</span>
-            <p className="text-slate-400 text-sm mt-1">© 2026 • Todos os direitos reservados.</p>
+            <p className="text-slate-400 text-xs mt-1">© 2026 • Todos os direitos reservados.</p>
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="text-slate-400 hover:text-emerald-600 transition-colors"><Instagram size={20} /></a>
             <a href="#" className="text-slate-400 hover:text-emerald-600 transition-colors"><Linkedin size={20} /></a>
           </div>
           <div className="text-center md:text-right">
-            <p className="text-xs text-slate-400">Desenvolvido com excelência por</p>
-            <p className="text-sm font-bold text-slate-800 tracking-tight">Desenvolver Digital</p>
+            <p className="text-xs text-slate-400 font-sans">Desenvolvido com excelência por</p>
+            <p className="text-sm font-bold text-slate-800 tracking-tight font-sans">Desenvolver Digital</p>
           </div>
         </div>
       </footer>
